@@ -143,6 +143,7 @@ section .section-header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0px 0px 15px 0px;
 }
 
 section .section-header h2 {
@@ -195,13 +196,23 @@ section .card {
 
 section .card video {
     width: 47.5%;
-    flex: 1 1 25%;
     margin: 0px;
     border-radius: 15px;
 }
 
 section .card img {
     width: 47.5%;
+    border-radius: 15px;
+}
+
+section .card iframe {
+    width: 47.5%;
+    height: 40vw;
+    max-width: 700px;
+    max-height:800px;
+    margin: 0px 0px 0px -10px;
+    border-radius: 15px;
+    border: none;
 }
 
 section .card .description {
