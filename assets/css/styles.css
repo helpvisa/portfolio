@@ -1,0 +1,126 @@
+/* wildcard */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* reusable styles */
+:root {
+    --large-font: 4vh;
+    --medium-font: 2vh;
+
+    --col-bg-light: #41393a;
+    --col-bg-dark: #342C2C;
+    --col-bold: #c6ca53;
+    --col-mild: #d8a361;
+    --col-pop: #ffa69e;
+}
+
+body { /* set height to 100% of viewport */
+    background-color: var(--col-bg-dark);
+}
+
+
+/* sidebar stylings */
+sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: stretch;
+    flex: 0 0 0px;
+    height:100vh;
+    z-index: 999;
+    padding: 5px 10px 0px 15px;
+    margin: 0px;
+    font-size: var(--large-font);
+    letter-spacing: 8px;
+    line-height: 1;
+    color: var(--col-mild);
+    background-color: var(--col-bg-light);
+
+    border-width: 0px 5px 0px 0px;
+    border-style: dashed;
+    border-color: var(--col-bg-dark);
+}
+
+sidebar nav {
+    line-height: 1.2;
+}
+
+sidebar nav ul {
+    color: var(--col-pop);
+    list-style: none;
+}
+
+sidebar nav ul li a {
+    color: var(--col-pop);
+    text-decoration: none;   
+}
+
+sidebar nav ul li a:hover {
+    color: var(--col-bold);
+}
+
+sidebar nav ul li a:active {
+    color: var(--col-mild);
+}
+
+
+/* header stylings */
+header {
+    position: relative;
+    flex: 1 0 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .bg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../images/header-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+
+}
+
+.headshot img {
+    height: 65vh;
+    flex: 0 1 65vh;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: var(--col-bold);
+}
+
+
+/* container stylings */
+.body-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+/* utility classes */
+.brighter {
+    color: var(--col-bold);
+}
