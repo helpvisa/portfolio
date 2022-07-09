@@ -182,9 +182,11 @@ section .card-container {
     margin: 0px 0px 0px -10px;
 }
 
+/* disabled for now; reformatting but leaving as option
 section .card-container .card:nth-child(even) {
     text-align: right;
 }
+*/
 
 section .card {
     display: flex;
@@ -252,6 +254,20 @@ section .card .description a:hover {
 
 section .card .description a:active {
     color: var(--col-mild);
+}
+
+
+/* section alignments */
+.sound {
+    text-align: left;
+}
+
+.code {
+    text-align: right;
+}
+
+.music {
+    text-align: left;
 }
 
 
