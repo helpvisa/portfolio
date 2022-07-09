@@ -16,6 +16,7 @@
     --col-bold: #c6ca53;
     --col-mild: #d8a361;
     --col-pop: #ffa69e;
+    --col-offwhite: #fad6d3;
 }
 
 body { /* set height to 100% of viewport */
@@ -32,11 +33,11 @@ sidebar {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    flex: 0 0 0px;
+    flex: 0 1 0%;
     height:100vh;
     z-index: 999;
     padding: 5px 10px 0px 15px;
-    margin: 0px;
+    margin: 0px 15px 0px 0px;
     font-size: var(--large-font);
     letter-spacing: 8px;
     line-height: 1;
@@ -52,6 +53,11 @@ sidebar h1 {
     font-weight: bolder;
 }
 
+sidebar h1 a {
+    color: var(--col-mild);
+    text-decoration: none;
+}
+
 sidebar nav {
     line-height: 1.2;
     margin: 0px 0px 20px 0px;
@@ -63,7 +69,7 @@ sidebar nav ul {
 }
 
 sidebar nav ul li a {
-    color: var(--col-pop);
+    color: var(--col-offwhite);
     text-decoration: none;
 }
 
@@ -79,7 +85,7 @@ sidebar nav ul li a:active {
 /* header stylings */
 header {
     position: relative;
-    flex: 1 0 100vh;
+    flex: 1 1 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +109,7 @@ header .bg {
 
 .headshot img {
     height: 65vh;
-    flex: 0 1 65vh;
+    flex: 0 1 auto;
     border-radius: 50%;
     border-width: 5px;
     border-style: dashed;
@@ -117,38 +123,39 @@ article {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    flex: 1 1;
 }
 
 
 /* section and card stylings */
 section {
+    flex: 1 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     padding: 0px;
-    margin: 0px;
     color: var(--col-mild);
 }
 
-section h2 {
-    font-weight: 500;
-    font-size: 4vw;
-    font-style: oblique;
-    letter-spacing: 8px;
-}
-
 section .section-header {
+    flex: 1 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0px 0px 50px 0px;
 }
 
 section .section-header h2 {
+    font-weight: 500;
+    font-size: 4vw;
+    font-style: oblique;
+    letter-spacing: 8px;
     flex: 1 0 auto;
 }
 
 section .section-divider-right {
     flex: 1 1 100%;
-    margin: 15px 0px 0px 15px;
+    margin: 0.8vw 0px 0px 15px;
     padding: 0px;
     height: 0px;
     border-width: 5px 0px 5px 5px;
@@ -159,7 +166,7 @@ section .section-divider-right {
 section .section-divider-left {
     display: none;
     flex: 1 1 100%;
-    margin: 15px 15px 0px -15px;
+    margin: 0.8vw 15px 0px -15px;
     padding: 0px;
     height: 0px;
     border-width: 5px 0px 5px 5px;
@@ -168,8 +175,10 @@ section .section-divider-left {
 }
 
 section .card-container {
-    width: 100%;
-    height: 40%;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px -10px;
 }
 
 section .card-container .card:nth-child(even) {
@@ -177,17 +186,22 @@ section .card-container .card:nth-child(even) {
 }
 
 section .card {
-    height: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    flex: 1 1 100%;
+    flex: 1 1 25%;
     margin: 20px;
 }
 
 section .card video {
     width: 47.5%;
-    flex: 0 1;
+    flex: 1 1 25%;
     margin: 0px;
+    border-radius: 15px;
+}
+
+section .card img {
+    width: 47.5%;
 }
 
 section .card .description {
@@ -197,30 +211,49 @@ section .card .description {
 
 section .card .description h3 {
     font-size: 2.4vw;
+    color: var(--col-pop);
 }
 
 section .card .description h4 {
     font-size: 1.8vw;
+    font-weight: lighter;
+    color: var(--col-pop);
 }
 
 section .card .description p {
     margin: 5px 0px 0px 0px;
     font-size: 1.4vw;
+    font-weight: lighter;
+    color: var(--col-pop);
+}
+
+section .card .description a {
+    margin: 5px 0px 0px 0px;
+    font-size: 1.4vw;
+    font-weight: lighter;
+    color: var(--col-offwhite);
+    text-decoration: none;
+}
+
+section .card .description a:hover {
+    color: var(--col-bold);
+}
+
+section .card .description a:active {
+    color: var(--col-mild);
 }
 
 
 /* general container stylings */
 .body-container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
 }
 
 .content-container {
-    flex: 1;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 
