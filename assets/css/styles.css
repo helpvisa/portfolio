@@ -9,7 +9,7 @@
 /* reusable styles */
 :root {
     --large-font: 4vh;
-    --medium-font: 2vh;
+    --medium-font: 2.5vh;
 
     --col-bg-light: #41393a;
     --col-bg-dark: #342C2C;
@@ -49,6 +49,10 @@ sidebar {
     text-shadow: 3px 3px 2px rgba(0,0,0,0.5);
 }
 
+sidebar .top {
+    display: none;
+}
+
 sidebar h1 {
     font-weight: bolder;
 }
@@ -71,6 +75,7 @@ sidebar nav ul {
 sidebar nav ul li a {
     color: var(--col-offwhite);
     text-decoration: none;
+    font-size: var(--large-font);
 }
 
 sidebar nav ul li a:hover {
@@ -137,6 +142,11 @@ section {
     color: var(--col-mild);
 }
 
+/* hide bottom-facing border when in desktop mode */
+.code .card-container .border-right {
+    display: none;
+}
+
 section .section-header {
     flex: 1 1;
     display: flex;
@@ -167,7 +177,7 @@ section .section-divider-right {
 section .section-divider-left {
     display: none;
     flex: 1 1 100%;
-    margin: 0.8vw 15px 0px -15px;
+    margin: 0.8vw 25px 0px 0px;
     padding: 0px;
     height: 0px;
     border-width: 5px 0px 5px 5px;
@@ -319,4 +329,223 @@ section .card .description a:active {
     border-width: 0px 0px 0px 5px;
     border-style: dashed;
     border-color: var(--col-pop);
+}
+
+.only-when-small {
+    display: none;
+}
+
+
+/* media queries for differing screen sizes, largest to smallest */
+@media screen and (max-width: 980px) { /* smaller desktop */
+    /* change behaviour of main container for header */
+    .body-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* sidebar changes */
+    sidebar {
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 10px 30px 10px;
+        margin: 0px;
+        border-width: 0px 0px 5px 0px;
+    }
+
+    sidebar .side {
+        display: none;
+    }
+    sidebar .top {
+        display: flex;
+    }
+
+    sidebar nav {
+        display: flex;
+        align-items: center;
+    }
+
+    sidebar nav ul {
+        display: flex;
+        height: 5px;
+    }
+
+    sidebar nav ul li {
+        margin: 0px 5px;
+    }
+
+    sidebar nav ul li a {
+        letter-spacing: 2px;
+        font-size: var(--medium-font);
+    }
+
+
+    /* headshot changes */
+    header {
+        flex: 1 1 90vh;
+    }
+
+
+    /* section changes */
+    section .section-divider-left {
+        display: block;
+    }
+
+    section .card-container {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    section .card {
+        height: 100%;
+    }
+
+    section .card .description {
+        flex: 1 1 60%;
+        margin: 0px auto;
+    }
+
+    section .card video {
+        width: 35%;
+    }
+    
+    section .card img {
+        width: 35%;
+    }
+    
+    section .card iframe {
+        width: 55%;
+        height: 32vh;
+        margin: 0px auto 0px auto;
+    }
+    
+
+    /* class-specific modifications */
+    .music {
+        flex-wrap: nowrap;
+    }
+
+    .music .card-container .card {
+        flex-direction: column;
+    }
+
+    .music .card-container .border-right {
+        width: 55%;
+        height: 2vw;
+        border-width: 0px 0px 5px 0px;
+        margin: 10px auto 2% auto;
+    }
+
+    .music .card-container .card .description {
+        text-align: center;
+    }
+
+
+    /* utility changes */
+    .border-right {
+        width: 10%;
+        height: 12vw;
+        margin: 0px 10px 0px -7%;
+
+    }
+    
+    .border-left {
+        width: 10%;
+        height: 12vw;
+        margin: 0px -7% 0px 10px;
+    }
+}
+
+@media screen and (max-width: 820px) { /* iPad air buggin */
+    sidebar { /* sidebar changes (unstick) */
+        position: relative;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) { /* tablet */
+    /* all sections change */
+    section {
+        flex-wrap: nowrap;
+    }
+
+    section .section-header h2 {
+        font-size: 5vw;
+    }
+
+    section .card-container .card {
+        flex-direction: column;
+    }
+
+    section .card video {
+        width: 85%;
+    }
+    
+    section .card img {
+        width: 85%;
+    }
+
+    section .card iframe {
+        width: 85%;
+        height: 60vh;
+    }
+
+    section .card-container .border-right, section .card-container .border-left {
+        width: 85%;
+        height: 2vw;
+        border-width: 0px 0px 5px 0px;
+        margin: 10px auto 2% auto;
+    }
+
+    section .card-container .card .description {
+        text-align: center;
+    }
+
+
+    /* section-specific changes */
+    .code .card-container .border-left {
+        display: none;
+    }
+
+    .code .card-container .border-right {
+        display: block;
+    }
+
+    .music .card-container .border-right {
+        width: 85%;
+    }
+
+
+    /* utility changes */
+    .only-when-small {
+        display: block;
+    }
+
+    .only-when-big {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px) { /* phone */
+    /* sidebar changes */
+    sidebar nav ul li a {
+        letter-spacing: 0px;
+    }
+
+    /* section changes */
+    section .section-header h2 {
+        font-size: 6vw;
+    }
+
+    section .card video {
+        width: 100%;
+    }
+    
+    section .card img {
+        width: 100%;
+    }
+
+    section .card iframe {
+        width: 100%;
+    }
 }
