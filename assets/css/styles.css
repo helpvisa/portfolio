@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', serif;
 }
 
 /* reusable styles */
@@ -69,7 +69,7 @@ sidebar nav {
 }
 
 sidebar nav ul {
-    color: var(--col-pop);
+    color: var(--col-offwhite);
     list-style: none;
 }
 
@@ -121,6 +121,16 @@ header .bg {
     border-style: dashed;
     border-color: var(--col-bold);
     box-shadow: 0px 0px 100px rgba(65,57,58,0.6);
+}
+
+.headshot img:hover {
+    -webkit-filter: contrast(0.75);
+    filter: contrast(0.75);
+}
+
+.headshot img:active {
+    -webkit-filter: contrast(1.25);
+    filter: contrast(0.5);
 }
 
 
@@ -208,6 +218,10 @@ section .card {
     margin: 20px;
 }
 
+section .card .image-link {
+    width: 47.5%;
+}
+
 section .card video {
     width: 47.5%;
     margin: 0px;
@@ -215,8 +229,19 @@ section .card video {
 }
 
 section .card img {
-    width: 47.5%;
+    flex: 1 1;
+    width: 100%;
     border-radius: 15px;
+}
+
+section .card img:hover {
+    -webkit-filter: contrast(0.75);
+    filter: contrast(0.75);
+}
+
+section .card img:active {
+    -webkit-filter: contrast(0.5);
+    filter: contrast(0.5);
 }
 
 section .card iframe {
@@ -345,7 +370,7 @@ section .card .description a:active {
 
 
 /* media queries for differing screen sizes, largest to smallest */
-@media screen and (max-width: 980px) { /* smaller desktop */
+@media screen and (max-width: 1200px) { /* smaller desktop */
     /* change behaviour of main container for header */
     .body-container {
         flex-direction: column;
@@ -356,7 +381,7 @@ section .card .description a:active {
     sidebar {
         flex-direction: row;
         align-items: center;
-        padding: 0px 10px 4.75vh 10px;
+        padding: 0px 10px 2vh 10px;
         margin: 0px;
         border-width: 0px 0px 5px 0px;
     }
@@ -379,16 +404,19 @@ section .card .description a:active {
 
     sidebar nav ul {
         display: flex;
-        height: 5px;
+        height: 40px;
+        margin: -12px 0px 0px 0px;
     }
 
     sidebar nav ul li {
-        margin: 0px 5px;
+        margin: 20px 5px;
+        letter-spacing: 2px;
+        font-size: 28px;
     }
 
     sidebar nav ul li a {
         letter-spacing: 2px;
-        font-size: var(--medium-font);
+        font-size: 28px;
     }
 
 
@@ -421,7 +449,7 @@ section .card .description a:active {
         width: 35%;
     }
     
-    section .card img {
+    section .card .image-link {
         width: 35%;
     }
     
@@ -468,16 +496,23 @@ section .card .description a:active {
     }
 }
 
+
 @media screen and (max-width: 820px) { /* iPad air buggin */
     sidebar { /* sidebar changes (unstick) */
         position: relative;
         justify-content: center;
+        padding: 0px 10px 1.5vh 10px;
     }
 
     sidebar h1 {
         height: 5vh;
     }
+
+    sidebar nav ul {
+        margin: 0px 0px 0px 0px;
+    }
 }
+
 
 @media screen and (max-width: 768px) { /* tablet */
     /* all sections change */
@@ -497,7 +532,7 @@ section .card .description a:active {
         width: 85%;
     }
     
-    section .card img {
+    section .card .image-link {
         width: 85%;
     }
 
@@ -573,7 +608,7 @@ section .card .description a:active {
         width: 100%;
     }
     
-    section .card img {
+    section .card .image-link {
         width: 100%;
     }
 
