@@ -317,7 +317,7 @@ section .card .description a:active {
     margin: 0px 0px 0px -7%;
     border-radius: 1vw;
     border-width: 0px 5px 0px 0px;
-    border-style: dashed;
+    border-style: dotted;
     border-color: var(--col-pop);
 }
 
@@ -327,7 +327,7 @@ section .card .description a:active {
     margin: 0px -7% 0px 0px;
     border-radius: 1vw;
     border-width: 0px 0px 0px 5px;
-    border-style: dashed;
+    border-style: dotted;
     border-color: var(--col-pop);
 }
 
@@ -488,6 +488,22 @@ section .card .description a:active {
     section .card iframe {
         width: 85%;
         height: 60vh;
+    }
+
+    section .card .description h3 {
+        font-size: 20px;
+    }
+    
+    section .card .description h4 {
+        font-size: 20px;
+    }
+    
+    section .card .description p {
+        font-size: 18px;
+    }
+    
+    section .card .description a {
+        font-size: 18px;
     }
 
     section .card-container .border-right, section .card-container .border-left {
