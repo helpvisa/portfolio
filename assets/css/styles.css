@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Bebas Neue', cursive;
 }
 
 /* reusable styles */
@@ -46,11 +46,12 @@ sidebar {
     border-width: 0px 5px 0px 0px;
     border-style: dashed;
     border-color: var(--col-bg-dark);
-    text-shadow: 3px 3px 2px rgba(0,0,0,0.5);
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
 }
 
 sidebar .top {
     display: none;
+    margin: 10px 0px 0px 0px;
 }
 
 sidebar h1 {
@@ -140,6 +141,7 @@ section {
     flex-direction: column;
     padding: 0px;
     color: var(--col-mild);
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
 }
 
 /* hide bottom-facing border when in desktop mode */
@@ -166,10 +168,10 @@ section .section-header h2 {
 
 section .section-divider-right {
     flex: 1 1 100%;
-    margin: 0.8vw 0px 0px 15px;
+    margin: 0px 0px 0px 15px;
     padding: 0px;
     height: 0px;
-    border-width: 5px 0px 5px 5px;
+    border-width: 5px 0px 0px 5px;
     border-style: dashed;
     border-color: var(--col-bold);
 }
@@ -177,10 +179,10 @@ section .section-divider-right {
 section .section-divider-left {
     display: none;
     flex: 1 1 100%;
-    margin: 0.8vw 25px 0px 0px;
+    margin: 0px 25px 0px 0px;
     padding: 0px;
     height: 0px;
-    border-width: 5px 0px 5px 5px;
+    border-width: 5px 0px 0px 5px;
     border-style: dashed;
     border-color: var(--col-bold);
 }
@@ -230,32 +232,38 @@ section .card iframe {
 section .card .description {
     flex: 1 1 40%;
     margin: 0px 25px 0px 25px;
+    letter-spacing: 2px;
 }
 
 section .card .description h3 {
     font-size: 2.4vw;
+    font-weight: 600;
     color: var(--col-pop);
+    font-family: 'Montserrat', sans-serif;
 }
 
 section .card .description h4 {
     font-size: 1.8vw;
-    font-weight: lighter;
+    font-weight: 350;
     color: var(--col-pop);
+    font-family: 'Montserrat', sans-serif;
 }
 
 section .card .description p {
     margin: 5px 0px 0px 0px;
     font-size: 1.4vw;
-    font-weight: lighter;
+    font-weight: 350;
     color: var(--col-pop);
+    font-family: 'Montserrat', sans-serif;
 }
 
 section .card .description a {
     margin: 5px 0px 0px 0px;
     font-size: 1.4vw;
-    font-weight: lighter;
+    font-weight: 350;
     color: var(--col-offwhite);
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section .card .description a:hover {
@@ -348,9 +356,13 @@ section .card .description a:active {
     sidebar {
         flex-direction: row;
         align-items: center;
-        padding: 0px 10px 30px 10px;
+        padding: 0px 10px 4.75vh 10px;
         margin: 0px;
         border-width: 0px 0px 5px 0px;
+    }
+
+    sidebar h1 {
+        height: 6vh;
     }
 
     sidebar .side {
@@ -460,6 +472,10 @@ section .card .description a:active {
     sidebar { /* sidebar changes (unstick) */
         position: relative;
         justify-content: center;
+    }
+
+    sidebar h1 {
+        height: 5vh;
     }
 }
 
