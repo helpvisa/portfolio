@@ -355,6 +355,55 @@ section .card-container .card:nth-child(even) {
     text-align: left;
 }
 
+.contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contact a {
+    text-decoration: none;
+    flex: 1 1 20%;
+    border-width: 5px;
+    margin: 0px 20px 20px 20px;
+    padding: 20px;
+    border-width: 5px;
+    border-style: double;
+    border-radius: 25px;
+    border-color: var(--col-pop);
+}
+
+.contact a:hover {
+    border-color: var(--col-bold);
+}
+
+.contact a:active {
+    border-color: var(--col-mild);
+}
+
+.contact a:hover > .card .description p {
+    color: var(--col-bold);
+}
+
+.contact a:active > .card .description p {
+    color: var(--col-mild);
+}
+
+.contact .card {
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .card .description {
+    height: 100%;
+    flex: 0 1;
+}
+
+.contact .card .description p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 42px;
+}
+
 
 /* general container stylings */
 .body-container {
@@ -526,6 +575,10 @@ section .card-container .card:nth-child(even) {
         text-align: center;
     }
 
+    .contact .card .description p {
+        font-size: 28px;
+    }
+
 
     /* utility changes */
     .border-right {
@@ -627,7 +680,7 @@ section .card-container .card:nth-child(even) {
     }
 
 
-    /* section-specific changes */
+    /* class-specific changes */
     .code .card-container .border-left {
         display: none;
     }
@@ -638,6 +691,14 @@ section .card-container .card:nth-child(even) {
 
     .music .card-container .border-right {
         width: 85%;
+    }
+
+    .contact .card .description {
+        flex: 1 1;
+    }
+
+    .contact .card .description p {
+        font-size: 24px;
     }
 
 
@@ -672,5 +733,10 @@ section .card-container .card:nth-child(even) {
 
     .card iframe {
         width: 100%;
+    }
+
+    /* class-specific changes */
+    .contact .card .description p {
+        font-size: 20px;
     }
 }
