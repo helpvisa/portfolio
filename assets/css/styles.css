@@ -1,4 +1,4 @@
-/* wildcard */
+/* wildcard for entire site */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +10,9 @@
 :root {
     --large-font: 4vh;
     --medium-font: 2.5vh;
+
+    --font-header: 'Bebas Neue', sans-serif;
+    --font-article: 'Montserrat', sans-serif;
 
     --col-bg-light: #41393a;
     --col-bg-dark: #342C2C;
@@ -157,7 +160,7 @@ header .bg {
 .about-me p {
     font-size: 24px;
     padding: 0px 20px 8px 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-article);
 }
 
 .about-me a {
@@ -165,7 +168,7 @@ header .bg {
     font-weight: 350;
     color: var(--col-offwhite);
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-article);
 }
 
 .about-me a:hover {
@@ -196,7 +199,7 @@ section {
     text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
 }
 
-/* hide bottom-facing border when in desktop mode */
+/* hide bottom-facing border when in desktop mode (done in code section only as bottom facing border modifies border-right class) */
 .code .card-container .border-right {
     display: none;
 }
@@ -246,12 +249,6 @@ section {
     flex-direction: column;
     margin: 0px 0px 0px -10px;
 }
-
-/* disabled for now; reformatting but leaving as option
-section .card-container .card:nth-child(even) {
-    text-align: right;
-}
-*/
 
 .card {
     display: flex;
@@ -307,14 +304,14 @@ section .card-container .card:nth-child(even) {
     font-size: 2.4vw;
     font-weight: 600;
     color: var(--col-pop);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-article);
 }
 
 .card .description h4 {
     font-size: 1.8vw;
     font-weight: 350;
     color: var(--col-pop);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-article);
 }
 
 .card .description p {
@@ -322,7 +319,7 @@ section .card-container .card:nth-child(even) {
     font-size: 1.4vw;
     font-weight: 350;
     color: var(--col-pop);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-article);
 }
 
 .card .description a {
@@ -331,7 +328,7 @@ section .card-container .card:nth-child(even) {
     font-weight: 350;
     color: var(--col-offwhite);
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-article);
 }
 
 .card .description a:hover {
@@ -356,6 +353,8 @@ section .card-container .card:nth-child(even) {
     text-align: left;
 }
 
+
+/* contact section */
 .contact {
     flex-direction: row;
     flex-wrap: wrap;
@@ -456,11 +455,13 @@ section .card-container .card:nth-child(even) {
     border-color: var(--col-pop);
 }
 
-.only-when-small {
+.only-when-small { /* disable anything for mobile view when in desktop view */
     display: none;
 }
 
 
+
+/*---------------------------------------------------------------*/
 /* media queries for differing screen sizes, largest to smallest */
 @media screen and (max-width: 1200px) { /* smaller desktop */
     /* change behaviour of main container for header */
