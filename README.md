@@ -6,7 +6,7 @@ Assembled with HTML and CSS.
 
 ### To-Do:
 
-Update my headshot with something a that has a little more face.
+Update my headshot with something that has a little more face.
 
 ### Available online at:
 https://helpvisa.github.io/portfolio/
